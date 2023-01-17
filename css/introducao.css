@@ -58,6 +58,6 @@
     grid-template-columns: 1fr;
   }
   .introducao img {
-    display: none;
+    /* display: none; */
   }
 }
