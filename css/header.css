@@ -21,9 +21,30 @@
   padding: 10px 20px; /* Utilizar padding para aumente área de clique */
   text-decoration: none;
   color: #141414;
-  display: block;
+  display: inline-block;
+  position: relative;
 }
 
+/* Underline animation */
+.header-menu a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color:#8C52FF;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.header-menu a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Responsividade */
 @media (max-width: 800px){
   .header {
     flex-direction: column;
