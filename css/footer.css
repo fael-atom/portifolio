@@ -22,8 +22,16 @@
   font-weight: bold;
   font-size: 2.25rem;
   line-height: 1.1;
-  color: #fff;
   margin-bottom: 30px;
+}
+
+.footer-contato a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-contato a:hover {
+  color: #8C52FF;
 }
 
 .footer-copy {
