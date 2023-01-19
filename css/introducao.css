@@ -8,6 +8,12 @@
   align-items: center;
 }
 
+.introducao img {
+  /* filter: drop-shadow(0rem 0rem 1rem rgba(20, 20, 180, 0.8)); */
+  filter: drop-shadow(0rem 0rem 1.2rem rgba(91, 45, 190, 0.8));
+
+}
+
 .introducao h1 {
   font-size: 4.5rem;
   line-height: 1.125; /* font-size X line-height X 16 = 80 pixels */
@@ -55,9 +61,21 @@
 
 @media (max-width: 400px){
   .introducao {
-    grid-template-columns: 1fr;
+    display: block;
+    
   }
   .introducao img {
-    /* display: none; */
+    width: 50%;
+    margin: auto;
   }
+
+  .introducao h1 {
+    text-align: center;
+  }
+  .introducao p {
+    font-size: 1rem;
+    display: none;
+  }
+
+
 }
