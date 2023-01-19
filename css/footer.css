@@ -12,6 +12,11 @@
   align-items: center;
 }
 
+.footer .subtitulo {
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .footer-texto {
   font-size: 1.5rem;
   line-height: 1.33;
