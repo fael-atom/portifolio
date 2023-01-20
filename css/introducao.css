@@ -1,7 +1,7 @@
 .introducao {
   max-width: 1200px;
   padding: 40px 20px;
-  margin: 0 auto;
+  margin: 30px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 100px;
@@ -11,7 +11,6 @@
 .introducao img {
   /* filter: drop-shadow(0rem 0rem 1rem rgba(20, 20, 180, 0.8)); */
   filter: drop-shadow(0rem 0rem 1.2rem rgba(91, 45, 190, 0.8));
-
 }
 
 .introducao h1 {
@@ -26,10 +25,21 @@
   display: block;
   width: 13px;
   height: 130px;
-  background: url('../img/detalhe-intro.svg') no-repeat center;
+  background: url("../img/detalhe-intro.svg") no-repeat center;
   position: absolute;
   left: -30px;
   top: 25px;
+}
+
+.introducao h1::after {
+  content: "";
+  display: none;
+  width: 13px;
+  height: 80px;
+  background: url("../img/detalhe-intro.svg") no-repeat center;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 .introducao p {
@@ -37,13 +47,17 @@
   color: #525252;
 }
 
-@media (max-width: 1000px){
+.introducao p img {
+  display: inline-block;
+}
+
+@media (max-width: 1000px) {
   .introducao h1 {
     font-size: 3rem;
   }
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
   .introducao {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -53,29 +67,41 @@
     font-size: 2rem;
   }
 
-  .introducao h1::before{
+  .introducao h1::before {
     width: 30px;
     height: 60px;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .introducao {
     display: block;
-    
+    margin: 0;
   }
   .introducao img {
-    width: 50%;
+    width: 70%;
     margin: auto;
   }
 
   .introducao h1 {
     text-align: center;
+    padding-top: 20px;
   }
+
+  .introducao h1::after {
+    display: block;
+    top: 20px;
+  }
+
+  .introducao h1::before {
+    width: 13px;
+    height: 80px;
+    top: 20px;
+    left: 0px;
+  }
+
   .introducao p {
     font-size: 1rem;
     display: none;
   }
-
-
 }

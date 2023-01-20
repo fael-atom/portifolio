@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 40px 20px;
 }
 
@@ -27,14 +27,14 @@
 
 /* Underline animation */
 .header-menu a:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
   height: 4px;
   bottom: 0;
   left: 0;
-  background-color:#8C52FF;
+  background-color: #8c52ff;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -45,7 +45,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 800px){
+@media (max-width: 800px) {
   .header {
     flex-direction: column;
     gap: 40px;
@@ -57,4 +57,3 @@
     border-radius: 4px;
   }
 }
-
