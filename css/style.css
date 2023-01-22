@@ -1,8 +1,9 @@
-@import './global.css';
-@import './header.css';
-@import './introducao.css';
-@import './experiencia.css';
-@import './formacao.css';
-@import './footer.css';
-@import './botao-topo.css';
-@import './scroll-bar.css';
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Lato&family=Montserrat+Alternates:ital,wght@0,100;1,900&family=Montserrat:wght@300;400;600;700&display=swap");
+@import "./global.css";
+@import "./header.css";
+@import "./introducao.css";
+@import "./experiencia.css";
+@import "./formacao.css";
+@import "./footer.css";
+@import "./botao-topo.css";
+@import "./scroll-bar.css";
