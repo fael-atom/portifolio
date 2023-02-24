@@ -32,11 +32,24 @@
   text-align: center;
 }
 
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }  
+}
+
 .footer-descricao .footer-ilustracao {
   /* grid-column-start: 2;
   grid-row-start: 2; */
   width: 70%;
   margin: auto;
+  animation: updown 3s infinite;
 }
 
 .footer-contato {
