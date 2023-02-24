@@ -51,6 +51,14 @@
   display: inline-block;
 }
 
+.introducao .saudacao {
+  display: none;
+  padding: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 @media (max-width: 1000px) {
   .introducao h1 {
     font-size: 3rem;
@@ -80,7 +88,11 @@
   }
   .introducao img {
     width: 70%;
-    margin: 60px auto;
+    margin: 0px auto;
+  }
+
+  .introducao .saudacao {
+    display: block;
   }
 
   .introducao h1 {
