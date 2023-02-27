@@ -4,62 +4,31 @@
   margin: 30px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 100px;
+  grid-template-rows: 50px 1fr;
+  gap: 50px;
   align-items: center;
-}
-
-@keyframes updown {
-  0% {
-    transform: translateY(-20px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-20px);
-  }  
 }
 
 .introducao > img {
   /* filter: drop-shadow(0rem 0rem 1rem rgba(20, 20, 180, 0.8)); */
+  grid-row: 1 / 3;
   filter: drop-shadow(0rem 0rem 1.2rem rgba(91, 45, 190, 0.8));
   animation: updown 3s infinite;
 }
 
-
-
-.introducao h1 {
+.introducao .titulo-dev {
   font-size: 4.5rem;
   line-height: 1.125; /* font-size X line-height X 16 = 80 pixels */
+  margin: 0 auto;
   margin-bottom: 30px;
   position: relative;
-}
-
-.introducao h1::before {
-  content: "";
-  display: block;
-  width: 13px;
-  height: 130px;
-  background: url("../img/detalhe-intro.svg") no-repeat center;
-  position: absolute;
-  left: -30px;
-  top: 25px;
-}
-
-.introducao h1::after {
-  content: "";
-  display: none;
-  width: 13px;
-  height: 80px;
-  background: url("../img/detalhe-intro.svg") no-repeat center;
-  position: absolute;
-  right: 0px;
-  top: 0px;
+  animation: fade-in-blink 2.5s;
 }
 
 .introducao p {
   font-size: 1.5rem;
   color: #525252;
+  animation: fade-in 3s;
 }
 
 .introducao p img {
@@ -67,11 +36,14 @@
 }
 
 .introducao .saudacao {
-  display: none;
-  padding: 40px;
-  text-align: center;
-  font-size: 1.2rem;
+  grid-column: 2;
+  grid-row: 1;
+  padding: 10px;
+  text-align: left;
+  font-size: 2.5rem;
   font-weight: 400;
+  line-height: 3rem;
+  animation: fade-in 3s;
 }
 
 @media (max-width: 1000px) {
@@ -107,12 +79,22 @@
   }
 
   .introducao .saudacao {
-    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
   }
 
-  .introducao h1 {
+  .introducao .titulo-dev {
     text-align: center;
-    padding-top: 20px;
+    font-size: 2.5rem;
+    line-height: 1.125; /* font-size X line-height X 16 = 80 pixels */
+    margin: 0 auto;
+    position: relative;
+    animation: fade-in-blink 2.5s;
   }
 
   .introducao h1::after {
@@ -130,5 +112,48 @@
   .introducao p {
     font-size: 1rem;
     display: none;
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-blink {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    color: black;
+  }
+  70% {
+    color: rgba(91, 45, 190, 0.8);
+  }
+  80% {
+    color: black;
+  }
+  90% {
+    color: rgba(91, 45, 190, 0.8);
+  }
+  100% {
+    color: black;
   }
 }

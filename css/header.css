@@ -44,10 +44,6 @@
   transform-origin: bottom left;
 }
 
-.header .marca-mobile {
-  display: none;
-}
-
 /**** MOBILE MENU ****/
 #hamburger-icon {
   /* margin: auto 0; */
