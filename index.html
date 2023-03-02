@@ -15,6 +15,7 @@
 
     gtag('config', 'G-T5ZL731T8C');
   </script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -71,7 +72,7 @@
       <h2 class="subtitulo">Experiência</h2>
     </div>
 
-    <div>
+    <div class="experiencia-conteudo">
       <p class="experiencia-texto">Desenvolvo pequenos projetos utilizando apenas <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.
 
       <div class="empresa">
@@ -145,25 +146,25 @@
 
 
       <ul class="footer-contato">
-        <li>
+        <li class="contato1">
           <a href="https://mail.google.com/mail/u/0/?source=mailto&to=contato@rafaelmota.dev&fs=1&tf=cm" target="_blank" id="email">
             <img src="/img/email-icone.svg" alt="Imagem de uma carta">
             <p>contato@rafaelmota.dev</p>
           </a>
         </li>
-        <li>
+        <li class="contato2">
           <a href="https://api.whatsapp.com/send?phone=5512991724072" target="_blank">
             <img src="/img/whatsapp-logo.svg" alt="Logo do WhatsApp redondo com um telefone dentro">
             <p>WhatsApp</p>
           </a>
         </li>
-        <li>
+        <li class="contato3">
           <a href="https://www.linkedin.com/in/faelmota/" target="_blank">
             <img src="/img/linkedin-logo.svg" alt="Logo do LinkedIn quadrado com as iniciais IN">
             <p>LinkedIn</p>
           </a>
         </li>
-        <li>
+        <li contato4>
           <a href="https://github.com/fael-atom" target="_blank">
             <img src="/img/github-logo.svg" alt="logo do GitHub redondo com um gato dentro">
             <p>GitHub</p>
@@ -177,6 +178,26 @@
 
     <button onclick="topFunction()" id="myBtn" title="Ir para o topo"><img src=" /img/seta-topo.svg" alt="Botão para ir ao topo da página." height="32" width="32"></button>
   </footer>
+
+  <script>
+    // Animação da INTRODUÇÃO
+    ScrollReveal().reveal('.foto-perfil', { scale: 0.15, duration: 2500, delay: 200 });
+
+    // Animação da EXPERIÊNCIA
+    ScrollReveal().reveal('.experiencia-texto', { distance: '200px', origin: 'bottom', duration: 2000 });
+    ScrollReveal().reveal('.empresa', { distance: '200px', origin: 'bottom', duration: 2000, delay: 400 });
+
+
+    // Animação da FORMAÇÃO
+    ScrollReveal().reveal('.formacao-texto', { distance: '200px', origin: 'bottom', duration: 2000 });
+    ScrollReveal().reveal('.faculdade-lista', { distance: '200px', origin: 'bottom', duration: 2000, interval: 400 });
+    ScrollReveal().reveal('.cursos', { distance: '200px', origin: 'bottom', duration: 2000, interval: 400 });
+    ScrollReveal().reveal('.idiomas', { distance: '200px', origin: 'bottom', duration: 2000, interval: 400 });
+
+    // Animação do CONTATO
+    ScrollReveal().reveal('.footer-descricao', { distance: '200px', origin: 'bottom', duration: 2000 });
+    ScrollReveal().reveal('.footer-contato', { distance: '200px', origin: 'bottom', duration: 2000 });  
+  </script>
 
 </body>
 
