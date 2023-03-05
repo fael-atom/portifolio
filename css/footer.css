@@ -52,7 +52,11 @@
   animation: updown 3s infinite;
 }
 
-.footer-contato {
+address {
+  font-style: normal;
+}
+
+.footer-contato, address {
   align-content: start;
   grid-column-start: 1;
 }
